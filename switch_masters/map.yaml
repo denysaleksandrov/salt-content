@@ -1,0 +1,11 @@
+# map file for moving minions
+
+
+# modify this section to include your environment's salt-masters, respectively
+newmaster: 10.40.7.221
+oldmaster: 10.40.7.222
+
+# modify this section to provide the list of minionIDs you need to move to the newmaster from the oldmaster
+minionids:
+  - winion-02
+

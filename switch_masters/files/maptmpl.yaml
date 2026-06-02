@@ -1,0 +1,11 @@
+# map file for moving minions
+# filename: /srv/salt/switch_masters/files/maptmpl.yaml
+# modify this section to include your environment's salt-masters, respectively
+newmaster: {{ newmaster }}
+oldmaster: {{ oldmaster }}
+
+# modify this section to provide the list of minionIDs you need to move to the newmaster from the oldmaster
+minionids:
+  {% for minion in minions -%}
+  - {{ minion }}
+  {% endfor %}
