@@ -2,7 +2,7 @@
 # Sample command: salt-run state.orch switch_masters --async
 
 
-{% import_yaml 'states/switch_masters/files/minions.yaml' as mm %}
+{% import_yaml 'switch_masters/files/minions.yaml' as mm %}
 {% set minions = mm['minionids'] %}
 
 {% if minions %}
@@ -11,7 +11,7 @@ move_minions_{{ minion }}:
   salt.state:
     - tgt: {{ minion }}
     - sls:
-      - states.switch_masters.move_minions_map
+      - switch_masters.move_minions_map
     - saltenv: main
 
 remove_minion_{{ minion }}:

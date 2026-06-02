@@ -3,7 +3,7 @@
 
 {% set minion = salt['grains.get']('os') %}
 # name old master and set new master ip address
-{% import_yaml 'states/switch_masters/files/minions.yaml' as mm %}
+{% import_yaml 'switch_masters/files/minions.yaml' as mm %}
 {% set oldmaster = mm['oldmaster'] %}
 {% set newmaster = mm['newmaster'] %}
 
